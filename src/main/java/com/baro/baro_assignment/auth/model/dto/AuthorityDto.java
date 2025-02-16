@@ -5,6 +5,6 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class MemberSignResponseDto {
-    private String token;
+public class AuthorityDto {
+    private String authorityName;
 }
