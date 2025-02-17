@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: baro_assignment
+
+service:
+  jwt:
+    secret-key: YmFyb19hc3NpZ25tZW50X3NlY3JldC1rZXk=YmFyb19hc3NpZ25tZW50X3NlY3JldC1rZXk=YmFyb19hc3NpZ25tZW50X3NlY3JldC1rZXk=
+    access-expiration: 600000 # 10분
+    refresh-expiration: 10800000 # 3시간
