@@ -5,6 +5,8 @@ import com.baro.baro_assignment.auth.model.User;
 import com.baro.baro_assignment.auth.model.UserRole;
 import com.baro.baro_assignment.auth.model.dto.*;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +20,9 @@ import java.util.Map;
 public class AuthService {
 
     public Map<String,User> users = new HashMap<String,User>();
+    @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
     private JwtUtil jwtUtil;
 
     public PostSignupResDto createMember(PostSignupReqDto requestDto) {
